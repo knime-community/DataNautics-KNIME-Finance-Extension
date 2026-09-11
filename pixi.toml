@@ -1,5 +1,5 @@
 [workspace]
-channels = ["knime", "conda-forge"]
+channels = ["knime/label/nightly", "knime", "conda-forge"]
 platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 
 [tasks]
@@ -7,22 +7,22 @@ test = { cmd = "pytest" }
 format = { cmd = "ruff format ." }
 
 [dependencies]
-python = "3.11.*"
-knime-extension = "*"
-knime-python-base = "*"
-knime-python-versions = "5.7.*"
+python = "3.13.*"
+knime-extension = "5.13.*"
+knime-python-base = "5.13.*"
+knime-python-versions = "5.13.*"
 numpy-financial = ">=1.0.0,<2"
 
 
 [feature.build.dependencies]
-python = "3.9.*"
-knime-extension-bundling = "5.7.*"
+python = "*"
+knime-extension-bundling = "6.1.*"
 
 [feature.debug.dependencies]
 debugpy = "*"
 
 [feature.build.tasks]
-build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "build-python-extension . {{ dest }}"}
+build = { args = [{ "arg" = "dest", "default" = "./local-update-site" }], cmd = "build-python-extension . {{ dest }} --include-packages --disable-strict-enforcement --update-sites-version nightly"}
 
 [environments]
 build = {features = ["build"], no-default-feature = true}
