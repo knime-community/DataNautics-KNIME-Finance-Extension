@@ -9,7 +9,7 @@ LOGGER = logging.getLogger(__name__)
 @knext.node(
     name="Matrix x Row Vector",
     node_type=knext.NodeType.MANIPULATOR,
-    icon_path="src\icons\RowVector.png",
+    icon_path="src/icons/RowVector.png",
     category=matrix_category,
 )
 @knext.input_table(name="Matrix", description="Matrix (nxm) - all numeric columns will be used")

@@ -9,18 +9,10 @@ from nodes.utils.scheduleParams import rate_column, nper_column, pv_column, freq
 
 LOGGER = logging.getLogger(__name__)
 
-schedule_category = knext.category(
-    path="/community/financial_functions",
-    level_id="schedule_functions",
-    name="Amortization Schedule Functions", 
-    description="Financial functions that output full amortization schedules",
-    icon="icons/icon.png"
-)
-
 
 @knext.node(name="CUMPRINC Schedule",
             node_type=knext.NodeType.MANIPULATOR,
-            icon_path="src\icons\CUMPRINCSCHEDULE.png",
+            icon_path="src/icons/CUMPRINCSCHEDULE.png",
             category=loan_schedule_category)
 @knext.input_table(name="Input Data", description="Table containing annual rate, nper, and pv values")
 @knext.output_table(name="Full Schedule", description="Complete amortization schedule with all payment components")
