@@ -6,7 +6,7 @@ from nodes.utils.category import loan_functions_category
 
 @knext.node(name="PMT", 
             node_type=knext.NodeType.MANIPULATOR,
-            icon_path="src\icons\PMT.png",
+            icon_path="src/icons/PMT.png",
             category=loan_functions_category)
 @knext.input_table(name="Input Data", description="Table containing rate, nper, and pv values")
 @knext.output_table(name="PMT Results", description="Table with calculated PMT values")

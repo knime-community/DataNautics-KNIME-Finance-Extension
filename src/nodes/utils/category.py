@@ -9,7 +9,7 @@ category = knext.category(
     name="DataNautics Finance Extension",
     description="Nodes for working in Finance Operations and FP&A",
 
-    icon="src\icons\DN.png",
+    icon="src/icons/DN.png",
 )
 
 loan_category = knext.category(
@@ -18,7 +18,7 @@ loan_category = knext.category(
     name="Loan Calculations",
     description="Excel-Like Loan Calculation Nodes",
 
-    icon="src\icons\LOANSCHEDULE.png",
+    icon="src/icons/LOANSCHEDULE.png",
 )
 
 
@@ -28,7 +28,7 @@ loan_schedule_category = knext.category(
     name="Loan Schedules Nodes",
     description="Loan Amortisation Schedule Nodes",
 
-    icon="src\icons\PPMTSCHEDULEFUTURE.png",
+    icon="src/icons/PPMTSCHEDULEFUTURE.png",
 )
 
 loan_functions_category = knext.category(
@@ -37,7 +37,7 @@ loan_functions_category = knext.category(
     name="Loan Functions Nodes",
     description="Excel-Like Loan Calculation Nodes",
 
-    icon="src\icons\PMT.png",
+    icon="src/icons/PMT.png",
 )
 
 
@@ -50,5 +50,5 @@ matrix_category = knext.category(
     name="DataNautics Matrix Operations",
     description="Matrix Operations Nodes (Element-wise)",
 
-    icon="src\icons\MatrixXMatrix.png",
+    icon="src/icons/MatrixXMatrix.png",
 )
