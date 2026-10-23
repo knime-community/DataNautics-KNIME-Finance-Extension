@@ -6,7 +6,7 @@ from nodes.utils.category import loan_functions_category
 
 @knext.node(name="CUMPRINC",
             node_type=knext.NodeType.MANIPULATOR,
-            icon_path="src\icons\CUMPRINC.png",
+            icon_path="src/icons/CUMPRINC.png",
             category=loan_functions_category)
 @knext.input_table(name="Input Data", description="Table containing rate, nper, pv, start period, and end period values")
 @knext.output_table(name="CUMPRINC Results", description="Table with calculated cumulative principal payments")
